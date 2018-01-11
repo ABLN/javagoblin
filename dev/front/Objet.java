@@ -1,3 +1,9 @@
+public class Partie {
+  public NumeroTour NumeroTour;
+  
+  public String NomPartie;
+}
+
 public class Tuile {
 
 }
@@ -25,7 +31,7 @@ public class Personnage extends Tuile {
   public String Type;
 }
 
-public class Hexagone {
+public class Hexagone extends NumeroTour {
 
   public String Territoire;
   public String Occupation;
