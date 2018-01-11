@@ -17,8 +17,9 @@ class Jeu{
 class Fenetre extends JFrame {
   public Fenetre(){
     this.setTitle("DemonLord");
-    this.setSize(1920, 1000);
+    this.setSize(1920, 1080);
     this.setLocationRelativeTo(null);
+	this.setResizable(false); 	
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 	this.setContentPane(new Panneau());
@@ -30,8 +31,7 @@ class Panneau extends JPanel {
   public void paintComponent(Graphics g){
     try {
 		Image img = ImageIO.read(new File("map.jpg"));
-//		g.drawImage(img, 0, 0, this);
-		g.drawImage(img, 0, 0, this.getWidth(), this.getWidth(), this);
+		g.drawImage(img, 0, 0, 960, 1010, this);
     }
 	catch (IOException e) {
       e.printStackTrace();
