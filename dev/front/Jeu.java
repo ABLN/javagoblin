@@ -1,4 +1,4 @@
-import java.awt.Color; 
+import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Graphics;
@@ -7,8 +7,8 @@ import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
- 
-class Launch{
+
+class Jeu{
 	public static void main(String[] args){
 		Fenetre fen = new Fenetre();
 	}
@@ -19,14 +19,14 @@ class Fenetre extends JFrame {
     this.setTitle("DemonLord");
     this.setSize(1920, 1000);
     this.setLocationRelativeTo(null);
-    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);             
-    
+    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 	this.setContentPane(new Panneau());
     this.setVisible(true);
   }
 }
 
-class Panneau extends JPanel { 
+class Panneau extends JPanel {
   public void paintComponent(Graphics g){
     try {
 		Image img = ImageIO.read(new File("map.jpg"));
@@ -36,7 +36,7 @@ class Panneau extends JPanel {
 	catch (IOException e) {
       e.printStackTrace();
     }
-	
+
     int x[] = {20, 30, 50, 60, 60, 50};
     int y[] = {30, 20, 20, 30, 50, 60};
     g.drawPolygon(x, y, 6);
