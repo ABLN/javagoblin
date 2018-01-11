@@ -1,20 +1,48 @@
-
+import java.awt.Color; 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.Graphics;
 
-public class Launch {
-  public static void main(String[] args){
+import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+ 
+class Launch{
+	public static void main(String[] args){
+		Fenetre fen = new Fenetre();
+	}
+}
 
-    JFrame fenetre = new JFrame();
+class Fenetre extends JFrame {
+  public Fenetre(){
+    this.setTitle("DemonLord");
+    this.setSize(1920, 1000);
+    this.setLocationRelativeTo(null);
+    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);             
+    
+	this.setContentPane(new Panneau());
+    this.setVisible(true);
+  }
+}
 
-    //Définit un titre pour notre fenêtre
-    fenetre.setTitle("DEMONLORD - PROJET JAVA - TEBROBLOBI");
-    //Définit sa taille : 400 pixels de large et 100 pixels de haut
-    fenetre.setSize(1000, 500);
-    //Nous demandons maintenant à notre objet de se positionner au centre
-    fenetre.setLocationRelativeTo(null);
-    //Termine le processus lorsqu'on clique sur la croix rouge
-    fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    //Et enfin, la rendre visible
-    fenetre.setVisible(true);
+class Panneau extends JPanel { 
+  public void paintComponent(Graphics g){
+    try {
+		Image img = ImageIO.read(new File("map.jpg"));
+//		g.drawImage(img, 0, 0, this);
+		g.drawImage(img, 0, 0, this.getWidth(), this.getWidth(), this);
+    }
+	catch (IOException e) {
+      e.printStackTrace();
+    }
+	
+    int x[] = {20, 30, 50, 60, 60, 50};
+    int y[] = {30, 20, 20, 30, 50, 60};
+    g.drawPolygon(x, y, 6);
+
+    int x2[] = {50, 60, 80, 90, 90, 80};
+    int y2[] = {60, 50, 50, 60, 80, 90};
+    g.drawPolygon(x2, y2, 6);
   }
 }
