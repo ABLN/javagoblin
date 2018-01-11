@@ -12,15 +12,15 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 class Jeu{
-	
+
 	public static void main(String[] args){
 		Fenetre fen = new Fenetre();
-		this.repaint(fen);
+		
 	}
 }
 
 class Fenetre extends JFrame {
-	
+
   private JMenuBar menuBar = new JMenuBar();
   private JMenu options = new JMenu("Options");
 
@@ -28,16 +28,16 @@ class Fenetre extends JFrame {
   private JMenuItem tuto = new JMenuItem("Tutoriel");
   private JMenuItem rules = new JMenuItem("Regles");
   private JMenuItem quit = new JMenuItem("Quitter");
-  
+
   public Fenetre(){
     this.setTitle("DemonLord");
     this.setSize(1920, 1080);
     this.setLocationRelativeTo(null);
-	this.setResizable(false); 	
+	this.setResizable(false);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 	this.setContentPane(new Panneau());
-	
+
 	//les options de la barre de menu
 	this.options.add(newPart);
 	this.options.add(tuto);
@@ -47,7 +47,7 @@ class Fenetre extends JFrame {
 	this.menuBar.add(options);
 
 	this.setJMenuBar(menuBar);
-	
+
     this.setVisible(true);
   }
 }
