@@ -1,14 +1,21 @@
-public class Partie {
-  public NumeroTour NumeroTour;
-  
+
+
+
+class Partie {
+  public int NumeroTour;
+  public Hexagone Hexagones;
   public String NomPartie;
+
+  public static void main(String[] args){
+
+  }
 }
 
-public class Tuile {
-
+class Tuile {
+  public String NomTuile;
 }
 
-public class Troupe extends Tuile {
+class Troupe extends Tuile {
   public String Nom;
   public char ModeMouvement;
   public String LocalisationBase;
@@ -21,17 +28,17 @@ public class Troupe extends Tuile {
   public String EtatArmure;
 }
 
-public class Personnage extends Tuile {
+class Personnage extends Tuile {
   public String Nom;
   public char ModeMouvement;
   public String LocalisationBase;
-  public int NiveauMagiePuissance;NiveauHabilité
-  public int NiveauHabilité;
+  public int NiveauMagiePuissance;
+  public int NiveauHabilite;
   public int Deplacement;
   public String Type;
 }
 
-public class Hexagone extends NumeroTour {
+class Hexagone {
 
   public String Territoire;
   public String Occupation;
@@ -43,6 +50,12 @@ public class Hexagone extends NumeroTour {
   public String SousTypeTerrainArrete6;
   public String TypeTerrain;
   public Tuile Tuiles;
-  public int CoordonnéeX;
-  public int CoordonnéeY;
+  public int CoordonneeX;
+  public int CoordonneeY;
+}
+
+class CarteDePouvoir {
+  public int NiveauMinimum;
+  public String Nom;
+  public String TypePersonnage;
 }
