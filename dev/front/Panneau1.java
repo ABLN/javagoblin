@@ -1,5 +1,3 @@
-package demonlord;
-
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -13,38 +11,22 @@ import javax.swing.JPanel;
 
 public class Panneau1 extends JPanel {
 
-
-    String adresseImg;
-
-    public JPanel fctAfficherImg(JPanel pan ,int posX ,int posY){
-
-        pan=new JPanel();//
-
-        Icon imgIcon=new ImageIcon("map.jpg");//
-        JLabel imgJLabel = new JLabel ();
-        imgJLabel.setIcon(imgIcon);
-
-        pan.add(imgJLabel);
-
-        pan.setLayout(null);//positionement-mise en forme du JPanel
-        imgJLabel.setSize(1000, 10000);
-        imgJLabel.setLocation(posX,posY);
-
-        return pan;
+public void paintComponent(Graphics g){
+    try {
+		Image img = ImageIO.read(new File("map.jpg"));
+//		g.drawImage(img, 0, 0, this);
+		g.drawImage(img, 0, 0, this.getWidth(), this.getWidth(), this);
+    }
+	catch (IOException e) {
+      e.printStackTrace();
     }
 
-    /* private BufferedImage image;
-     public Panneau(){
-        setOpaque(true);
-        try
-        {
-            image = ImageIO.read(new File("map.jpg"));
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-        this.setVisible(true);
-     }*/
+    int x[] = {20, 30, 50, 60, 60, 50};
+    int y[] = {30, 20, 20, 30, 50, 60};
+    g.drawPolygon(x, y, 6);
 
+    int x2[] = {50, 60, 80, 90, 90, 80};
+    int y2[] = {60, 50, 50, 60, 80, 90};
+    g.drawPolygon(x2, y2, 6);
+  }
 }

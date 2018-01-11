@@ -7,14 +7,28 @@ import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 
 class Jeu{
+	
 	public static void main(String[] args){
 		Fenetre fen = new Fenetre();
+		this.repaint(fen);
 	}
 }
 
 class Fenetre extends JFrame {
+	
+  private JMenuBar menuBar = new JMenuBar();
+  private JMenu options = new JMenu("Options");
+
+  private JMenuItem newPart = new JMenuItem("Nouvelle partie");
+  private JMenuItem tuto = new JMenuItem("Tutoriel");
+  private JMenuItem rules = new JMenuItem("Regles");
+  private JMenuItem quit = new JMenuItem("Quitter");
+  
   public Fenetre(){
     this.setTitle("DemonLord");
     this.setSize(1920, 1080);
@@ -23,6 +37,17 @@ class Fenetre extends JFrame {
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 	this.setContentPane(new Panneau());
+	
+	//les options de la barre de menu
+	this.options.add(newPart);
+	this.options.add(tuto);
+	this.options.add(rules);
+	this.options.add(quit);
+	//Barre de menu
+	this.menuBar.add(options);
+
+	this.setJMenuBar(menuBar);
+	
     this.setVisible(true);
   }
 }
