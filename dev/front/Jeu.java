@@ -97,17 +97,18 @@ class Panneau extends JPanel {
 		//int	hauteur	= im.getHeight(this);
 		//int	largeur	= im.getHeight(this);
 		//im	= im.getScaledInstance(largeur,hauteur,Image.SCALE_DEFAULT);
-		g.drawImage(img, 0, 0, 1204, 1461, this);//largeur et hauteur
+		g.drawImage(img, 0, 0, 1198, 1678, this);//largeur et hauteur
 		//g.drawImage(img,0,0,this.getWidth() , this.getHeight(), this);
     }
 	catch (IOException e) {
       e.printStackTrace();
     }
-	
-	int R = 40;
-	int Ox = 60;
-	int Oox = 60;
-	int Oy = 60;
+	// Rayon Hex
+	int R = 35;
+	// coordonnées
+	int Ox = 48;
+	int Oox = 48; //remettre valeur de X
+	int Oy = 52;
 	
 	int Col = 11;
 	int Ligne = 46;
@@ -120,33 +121,33 @@ class Panneau extends JPanel {
 		
 			x[0] = (int)Ox - R;
 			y[0] = (int)Oy;
-			System.out.println("x0 : " + x[0]);
-			System.out.println("y0 : " + y[0]);
+			// System.out.println("x0 : " + x[0]);
+			// System.out.println("y0 : " + y[0]);
 			
 			x[1] = (int)Ox - R/2;
 			y[1] = (int)Oy - R;
-			System.out.println("x1 : " + x[1]);
-			System.out.println("y1 : " + y[1]);
+			// System.out.println("x1 : " + x[1]);
+			// System.out.println("y1 : " + y[1]);
 			
 			x[2] = (int)Ox + R/2;
 			y[2] = (int)Oy - R;
-			System.out.println("x2 : " + x[2]);
-			System.out.println("y2 : " + y[2]);
+			// System.out.println("x2 : " + x[2]);
+			// System.out.println("y2 : " + y[2]);
 			
 			x[3] = (int)Ox + R;
 			y[3] = (int)Oy;
-			System.out.println("x3 : " + x[3]);
-			System.out.println("y3 : " + y[3]);
+			// System.out.println("x3 : " + x[3]);
+			// System.out.println("y3 : " + y[3]);
 			
 			x[4] = (int)Ox + R/2;
 			y[4] = (int)Oy + R;
-			System.out.println("x4 : " + x[4]);
-			System.out.println("y4 : " + y[4]);
+			// System.out.println("x4 : " + x[4]);
+			// System.out.println("y4 : " + y[4]);
 			
 			x[5] = (int)Ox - R/2;
 			y[5] = (int)Oy + R;
-			System.out.println("x5 : " + x[5]);
-			System.out.println("y5 : " + y[5]);
+			// System.out.println("x5 : " + x[5]);
+			// System.out.println("y5 : " + y[5]);
 			
 			// incrémentation pour le prochain de droite 
 			Ox = Ox + 3*R;
