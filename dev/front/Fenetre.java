@@ -77,6 +77,6 @@ class Fenetre extends JFrame {
  
   this.setJMenuBar(menuBar);
   
-    this.setVisible(true);
+  this.setVisible(true);
   }
 }
