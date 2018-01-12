@@ -109,8 +109,8 @@ class Panneau extends JPanel {
 	int Oox = 60;
 	int Oy = 60;
 	
-	int Col = 3;
-	int Ligne = 3;
+	int Col = 11;
+	int Ligne = 46;
 	
 	int x[] = {0, 0, 0, 0, 0, 0};
 	int y[] = {0, 0, 0, 0, 0, 0};
@@ -150,20 +150,19 @@ class Panneau extends JPanel {
 			
 			// incrémentation pour le prochain de droite 
 			Ox = Ox + 3*R;
-			System.out.println("inc " + Ox);
-
+			System.out.println("inc x : " + Ox);
 			
 			g.drawPolygon(x, y, 6);
 		}
 		
 		Oy = Oy + R;
 		if (Ox == Oox + R * 3 * Col){
-			Ox = Oox;
-		}
-		else {
 			Ox = Oox + R + R/2;
 		}
-		System.out.println("inc " + Oy);
+		else {
+			Ox = Oox;
+		}
+		System.out.println("inc y : " + Oy);
 	}
   }
 }
