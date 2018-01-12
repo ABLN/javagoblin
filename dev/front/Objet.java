@@ -12,7 +12,11 @@ class Partie {
 }
 
 class Tuile {
-  public String NomTuile;
+  public String Nom;
+  public char ModeMouvement;
+  public String LocalisationBase;
+  public int Deplacement;
+  public String Image;
 }
 
 class Troupe extends Tuile {
@@ -29,9 +33,7 @@ class Troupe extends Tuile {
 }
 
 class Personnage extends Tuile {
-  public String Nom;
-  public char ModeMouvement;
-  public String LocalisationBase;
+
   public int NiveauMagiePuissance;
   public int NiveauHabilite;
   public int Deplacement;
