@@ -19,21 +19,22 @@ import java.awt.Desktop;
 public class Panneau extends JPanel {
 	
 	//Tab récupération coordonnées
-	// int HexX[] = ;
-	// int HexY[] = ;
+	public int HexX[] = new int[528];
+	public int HexY[] = new int[528];
+	private int k = 0;
 	
 	// Rayon Hex
-	int R = 35;
+	private int R = 35;
 	// coordonnées Hex
-	int Ox = 48;
-	int Oox = 48; //remettre valeur de X
-	int Oy = 52;
+	private int Ox = 48;
+	private int Oox = 48; //remettre valeur de X
+	private int Oy = 52;
 	
-	int Col = 11;
-	int Ligne = 46;
+	private int Col = 11;
+	private int Ligne = 48;
 	
-	int x[] = {0, 0, 0, 0, 0, 0};
-	int y[] = {0, 0, 0, 0, 0, 0};
+	private int x[] = {0, 0, 0, 0, 0, 0};
+	private int y[] = {0, 0, 0, 0, 0, 0};
 	
 	public void paintComponent(Graphics g){
 		try {
@@ -52,6 +53,11 @@ public class Panneau extends JPanel {
 		
 		for (int j = 0; j < Ligne; j++){
 			for (int i = 0; i < Col; i++){
+				
+				// ajout dans le tableau en dur 
+				HexX[k] = Ox;
+				HexY[k] = Oy;
+				k = k + 1;
 			
 				x[0] = (int)Ox - R;
 				y[0] = (int)Oy;
@@ -85,7 +91,7 @@ public class Panneau extends JPanel {
 				
 				// incrémentation pour le prochain de droite 
 				Ox = Ox + 3*R;
-				System.out.println("inc x : " + Ox);
+				// System.out.println("inc x : " + Ox);
 				
 				g.drawPolygon(x, y, 6);
 			}
@@ -97,7 +103,13 @@ public class Panneau extends JPanel {
 			else {
 				Ox = Oox;
 			}
-			System.out.println("inc y : " + Oy);
+			// System.out.println("inc y : " + Oy);
 		}
+		
+		/* for (int i = 0; i < HexX.length; i++){
+			System.out.println("pour : "+ i + "On a en X : " + HexX[i]);
+			System.out.println("pour : "+ i + "On a en Y : " + HexY[i]);
+		} TEST AFFICHAGE VALEUR ORIGINE DES HEXAGONE*/
+		
 	}
 }
