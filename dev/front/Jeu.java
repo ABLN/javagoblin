@@ -35,8 +35,7 @@ class Fenetre extends JFrame {
   
   public Fenetre(){
     this.setTitle("DemonLord");
-	this.setSize(1000, 900); //longeur et hauteur
-    //this.setSize(1920, 1080);
+	this.setSize(1300, 950); //longeur et hauteur
     this.setLocationRelativeTo(null);
 	this.setResizable(false); 	
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -98,19 +97,72 @@ class Panneau extends JPanel {
 		//int	hauteur	= im.getHeight(this);
 		//int	largeur	= im.getHeight(this);
 		//im	= im.getScaledInstance(largeur,hauteur,Image.SCALE_DEFAULT);
-		g.drawImage(img, 0, 0, 1600, 1350, this);//largeur et hauteur
+		g.drawImage(img, 0, 0, 1204, 1461, this);//largeur et hauteur
 		//g.drawImage(img,0,0,this.getWidth() , this.getHeight(), this);
     }
 	catch (IOException e) {
       e.printStackTrace();
     }
-
-    /*int x[] = {20, 30, 50, 60, 60, 50};
-    int y[] = {30, 20, 20, 30, 50, 60};
-    g.drawPolygon(x, y, 6);
-
-    int x2[] = {50, 60, 80, 90, 90, 80};
-    int y2[] = {60, 50, 50, 60, 80, 90};
-    g.drawPolygon(x2, y2, 6);*/
+	
+	int R = 40;
+	int Ox = 60;
+	int Oox = 60;
+	int Oy = 60;
+	
+	int Col = 11;
+	int Ligne = 46;
+	
+	int x[] = {0, 0, 0, 0, 0, 0};
+	int y[] = {0, 0, 0, 0, 0, 0};
+	
+	for (int j = 0; j < Ligne; j++){
+		for (int i = 0; i < Col; i++){
+		
+			x[0] = (int)Ox - R;
+			y[0] = (int)Oy;
+			System.out.println("x0 : " + x[0]);
+			System.out.println("y0 : " + y[0]);
+			
+			x[1] = (int)Ox - R/2;
+			y[1] = (int)Oy - R;
+			System.out.println("x1 : " + x[1]);
+			System.out.println("y1 : " + y[1]);
+			
+			x[2] = (int)Ox + R/2;
+			y[2] = (int)Oy - R;
+			System.out.println("x2 : " + x[2]);
+			System.out.println("y2 : " + y[2]);
+			
+			x[3] = (int)Ox + R;
+			y[3] = (int)Oy;
+			System.out.println("x3 : " + x[3]);
+			System.out.println("y3 : " + y[3]);
+			
+			x[4] = (int)Ox + R/2;
+			y[4] = (int)Oy + R;
+			System.out.println("x4 : " + x[4]);
+			System.out.println("y4 : " + y[4]);
+			
+			x[5] = (int)Ox - R/2;
+			y[5] = (int)Oy + R;
+			System.out.println("x5 : " + x[5]);
+			System.out.println("y5 : " + y[5]);
+			
+			// incrémentation pour le prochain de droite 
+			Ox = Ox + 3*R;
+			System.out.println("inc x : " + Ox);
+			
+			g.drawPolygon(x, y, 6);
+		}
+		
+		Oy = Oy + R;
+		if (Ox == Oox + R * 3 * Col){
+			Ox = Oox + R + R/2;
+		}
+		else {
+			Ox = Oox;
+		}
+		System.out.println("inc y : " + Oy);
+	}
   }
 }
