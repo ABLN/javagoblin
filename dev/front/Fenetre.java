@@ -29,9 +29,6 @@ class Fenetre extends JFrame {
 
   public Fenetre(){
 
-    
-
-
     this.setTitle("DemonLord");
   this.setSize(1300, 950); //longeur et hauteur
     this.setLocationRelativeTo(null);
