@@ -10,6 +10,7 @@ import javax.imageio.ImageIO;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.*;
 
 import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
@@ -17,8 +18,9 @@ import java.awt.event.ActionEvent;
 import java.awt.Desktop;
 
 public class Main{
-	
+
 	public static void main(String[] args){
 		Fenetre fen = new Fenetre();
+		
 	}
 }
