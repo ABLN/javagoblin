@@ -118,6 +118,7 @@ public class Panneau extends JPanel {
 			System.out.println("pour : "+ i + "On a en X : " + HexX[i]);
 			System.out.println("pour : "+ i + "On a en Y : " + HexY[i]);
 		} TEST AFFICHAGE VALEUR ORIGINE DES HEXAGONE*/
+		
 		try {
 			Image img1 = ImageIO.read(new File("ressources\\demon_character_ik_high_priest.png"));
 			//ImageIcon   trait = new ImageIcon(ImageIO.read(new File("map.jpg")));
