@@ -9,6 +9,7 @@ import java.awt.Graphics2D;
 
 import javax.swing.JScrollPane;
 import java.awt.BasicStroke;
+import java.io.*;
 
 public class Panneau extends JPanel {
 
@@ -79,7 +80,7 @@ public class Panneau extends JPanel {
 				y[5] = (int)Oy + R;
 
 				System.out.println("inc x : " + Ox);
-				
+
 				g.drawPolygon(x, y, 6);
 			}
 
@@ -98,7 +99,7 @@ public class Panneau extends JPanel {
 			System.out.println("pour : "+ i + "On a en X : " + HexX[i]);
 			System.out.println("pour : "+ i + "On a en Y : " + HexY[i]);
 		} TEST AFFICHAGE VALEUR ORIGINE DES HEXAGONE*/
-		
+
 		try {
 			Image img1 = ImageIO.read(new File("ressources\\demon_character_ik_high_priest.png"));
 			//ImageIcon   trait = new ImageIcon(ImageIO.read(new File("map.jpg")));
@@ -115,17 +116,17 @@ public class Panneau extends JPanel {
 
 			System.out.println("inc y : " + Oy);
 		}
-		
-		/*for(int i = 1; i < Ligne; i=i+2) 
-		 { 
-			for(int j = 0; j < Col; j++) 
-			{ 
+
+		/*for(int i = 1; i < Ligne; i=i+2)
+		 {
+			for(int j = 0; j < Col; j++)
+			{
 				Polygon poly = getHex(Oxx, Oyy, RR);
-				//Polygon poly = getPolygon(i, j); 
-			} 
+				//Polygon poly = getPolygon(i, j);
+			}
 			g2d.draw(poly);
 		}
 		*/
 	}
-	
+
 }
