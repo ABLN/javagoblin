@@ -34,7 +34,7 @@ class Fenetre extends JFrame {
   
     this.add(scrollPane);
     
-	setMenu();
+	this.setMenu();
 	
     //Barre de menu
   this.menuBar.add(options);
