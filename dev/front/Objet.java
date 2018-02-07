@@ -14,7 +14,7 @@ class Tuile {
 }
 
 class Troupe extends Tuile {
-  public String Nom;
+
   public char ModeMouvement;
   public String LocalisationBase;
   public String TypeArmement;
