@@ -26,7 +26,9 @@ class Fenetre extends JFrame {
   private JMenuItem tuto = new JMenuItem("Tutoriel");
   private JMenuItem rules = new JMenuItem("Regles");
   private JMenuItem quit = new JMenuItem("Quitter");
-
+  private Image bg;
+  //private Panneau pan;
+ 
   public Fenetre(){
 
 
@@ -55,13 +57,19 @@ class Fenetre extends JFrame {
 		Arche arche022 = new Arche(0303, 0402, Arche.TypesTerrain.Campagne);
 
     this.setTitle("DemonLord");
-  this.setSize(1300, 950); //longeur et hauteur
+	this.setSize(1300, 950); //longeur et hauteur
     this.setLocationRelativeTo(null);
-  this.setResizable(false);
+	this.setResizable(false);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-  Panneau pan = new Panneau();
-  this.setContentPane(pan);
+	this.setResizable(false);   
+    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	//this.setContentPane(new ImagePanel(new ImageIcon("map.jpg").getImage()));
+	Tuile t = new Tuile();		
+	Image image = t.chargerImage("map.jpg");
+	Panneau pan = new Panneau();
+	this.setContentPane(pan);
+	//this.add(new Panneau());
 
   //les options de la barre de menu
   this.options.add(newPart);
