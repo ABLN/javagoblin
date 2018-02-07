@@ -38,4 +38,5 @@ Arche arche018 = new Arche(0203, 0103, Arche.TypesTerrain.Colline);
 Arche arche019 = new Arche(0203, 0303, Arche.TypesTerrain.Riviere);
 Arche arche020 = new Arche(0303, 0202, Arche.TypesTerrain.Colline);
 Arche arche021 = new Arche(0303, 0302, Arche.TypesTerrain.Route);
-Arche arche022 = new Arche(0303, 0402, Arche.TypesTerrain.Campagne);*/
+Arche arche022 = new Arche(0303, 0402, Arche.TypesTerrain.Campagne);
+*/

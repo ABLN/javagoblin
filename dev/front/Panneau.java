@@ -27,7 +27,7 @@ public class Panneau extends JPanel {
 	private int y[] = {0, 0, 0, 0, 0, 0};
 
 	public void paintComponent(Graphics g){
-		System.out.println("draw");
+		//System.out.println("draw");
 		g.fillRect(0, 0, 1300, 1000);
 		try {
 			Image img = ImageIO.read(new File("map.jpg"));
@@ -95,16 +95,11 @@ public class Panneau extends JPanel {
 		
 		try {
 			Image img1 = ImageIO.read(new File("ressources\\demon_character_ik_high_priest.png"));
-			g.drawImage(img1, HexX[1]-20, HexY[1]-20, 40, 40, this);//largeur et hauteur
-			
+			g.drawImage(img1, HexX[1]-20, HexY[1]-20, 40, 40, this);//largeur et hauteur			
 			g.drawImage(img1, HexX[0]-20, HexY[0]-20, 40, 40, this);
 			g.drawImage(img1, HexX[120]-20, HexY[120]-20, 40, 40, this);
 			g.drawImage(img1, HexX[500]-20, HexY[500]-20, 40, 40, this);
-			int a = HexX[1]-20;
-			int b = HexY[1]-20;
-			
-			System.out.println(a);
-			System.out.println(b);
+
 		}
 		catch (IOException e) {
 		  e.printStackTrace();

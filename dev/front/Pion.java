@@ -1,29 +1,29 @@
 class Pion{
 
     public String Nom;
-    public char modeDeMouvement;
-    public String Localisation;
-    public int deplacement;
-    public String image;
+    public char ModeDeMouvement;
+    public String LocalisationBase;
+    public int Deplacement;
+    public String Image;
 
 }
 
 class Personnage extends Pion{
 
-    public char type;
-    public int niveauMagie;
-    public int niveauHabilite;
+    public char Type;
+    public int NiveauMagiePuissance;
+    public int NiveauHabilite;
 
 }
 
 class Troupe extends Pion{
 
-    public char typeArmement;
-    public char typeTroupe;
-    public int moral;
-    public int valeurMele;
-    public int valeurMissile;
-    public int etatArmure;
+    public char TypeArmement;
+    public char TypeTroupe;
+    public int Moral;
+    public int ValeurMele;
+    public int ValeurMissile;
+    public int EtatArmure;
 
 }
 

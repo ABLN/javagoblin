@@ -1,6 +1,6 @@
 public class Partie {
   public int NumeroTour;
-  public Hexagone Hexagones;
   public String NomPartie;
-
+  public String joueur1;
+  public String joureur2;
 }
