@@ -94,20 +94,9 @@
 				// System.out.println("inc y : " + Oy);
 			}
 
-			/* for (int i = 0; i < HexX.length; i++){
-				System.out.println("pour : "+ i + "On a en X : " + HexX[i]);
-				System.out.println("pour : "+ i + "On a en Y : " + HexY[i]);
-			} TEST AFFICHAGE VALEUR ORIGINE DES HEXAGONE */
-
 			try {
 				Image img1 = ImageIO.read(new File("ressources\\demon_character_ik_high_priest.png"));
-				//ImageIcon   trait = new ImageIcon(ImageIO.read(new File("map.jpg")));
-				//Image         im   =  trait.getImage();
-				//int	hauteur	= im.getHeight(this);
-				//int	largeur	= im.getHeight(this);
-				//im	= im.getScaledInstance(largeur,hauteur,Image.SCALE_DEFAULT);
 				g.drawImage(img1, HexX[1]-20, HexY[1]-20, 40, 40, this);//largeur et hauteur
-				//g.drawImage(img,0,0,this.getWidth() , this.getHeight(), this);
 			}
 			catch (IOException e) {
 			  e.printStackTrace();
