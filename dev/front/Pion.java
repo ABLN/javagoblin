@@ -1,22 +1,34 @@
 class pion{
 
     public String Nom;
-    public
-    public
-    public
-    public
-    public
+    public Char modeDeMouvement
+    public String Localisation
+    public int deplacement
+    public String image;
 
+}
 
+class personnage extends pion{
+
+    public Char type
+    public int niveauMagie;
+    public int niveauHabilite;
+
+}
+
+class troupe extends pion{
+
+    public Char typeArmement;
+    public Char typeTroupe;
+    public int moral;
+    public int valeurMele;
+    public int valeurMissile;
+    public int etatArmure;
 
 }
 
 
-
-
-
-
-public class personnages extends pion {
+public class personnage extends pion {
 
 
     pion p1 = new pion("Hight Priest", "C", "HO", "5", "5", "0", "5");
