@@ -20,18 +20,8 @@ import java.awt.Desktop;
 public class Main{
 
 	public static void main(String[] args){
-<<<<<<< Updated upstream
-		Fenetre fen = new Fenetre();		
-
-
-=======
 
 		Fenetre fen = new Fenetre();
-<<<<<<< Updated upstream
-		
-=======
 
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 	}
 }
